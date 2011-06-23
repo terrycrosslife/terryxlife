@@ -1,0 +1,12 @@
+/* 
+    Document   : blog
+    Created on : May 22, 2011, 5:56:33 PM
+    Author     : terryx
+  
+*/
+.blog_box{
+  margin:0 5px;
+  padding:5px 0;
+  border-bottom: 1px solid #000;
+  border-bottom-style:dotted;
+}

@@ -1,0 +1,22 @@
+/* 
+    Document   : common
+    Created on : May 15, 2011, 4:50:37 PM
+    Author     : TerryX
+  
+*/
+
+.popup_error {
+   position:absolute;
+    width:400px;
+    height:25px;
+    display:block;
+    border: 1px solid;
+    margin-top: 15px;
+    text-indent: 25px;
+    padding:15px;
+    background-repeat: no-repeat;
+    background-position: 1% 50%;
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('../img/error.png');
+}

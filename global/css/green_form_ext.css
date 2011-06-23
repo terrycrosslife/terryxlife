@@ -1,0 +1,77 @@
+/* 
+    Document   : green_form_ext
+    Created on : May 28, 2011, 9:53:33 AM
+    Author     : terryx
+    Description:
+        Extend green form
+*/
+
+/* 
+    Document   : green_form
+    Created on : May 8, 2011, 11:22:28 PM
+    Author     : TerryX
+*/
+
+.green_form{
+	margin:15px;
+	display: block;
+}
+.green_form input[type=submit]{
+	margin-top: 15px;
+	margin-left: 230px;
+	padding: 1px 5px;
+	border-top: 1px solid #BAD300;
+	border-left: 1px solid #A9C817;
+	border-right: 1px solid #7DAB00;
+	border-bottom: 1px solid #578900;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	background-color: #7DAB00;
+	color: #FFFFFF;
+	box-shadow: 0 0 1px #BAD300;
+	cursor: pointer;
+}
+.green_form input[type=submit]:hover{
+	background-color: #A9C817;
+}
+.green_form label {
+	width: 200px;
+	margin: 5px;
+	padding: 5px;
+	display:inline-block;
+}
+.green_form label.error {
+	color: red;
+	margin-left: 5px;
+	width: 100%;
+	height: 16px;
+}
+.green_form input[type=text], .green_form input[type=password] {
+	width: 180px;
+	display: inline-block;
+	border:1px solid #ABABAB;
+	-moz-border-radius:4px;
+	-moz-box-shadow:0 1px 2px #C0C0C0 inset;
+	-webkit-border-radius:4px;
+	-webkit-box-shadow:0 1px 2px #C0C0C0 inset;
+	margin:7px;
+	padding:3px;
+}
+.green_form input.title {
+	width:300px;
+}
+.green_form textarea {
+	margin:0 10px;
+	padding: 5px;
+}
+.green_form select {
+	min-width: 120px;
+	display: inline-block;
+	margin:10px;
+}
+.green_form .form_message {
+	margin:5px;
+	padding:3px;
+	color: #578900;
+}
