@@ -14,8 +14,8 @@ date_default_timezone_set('Asia/Kuala_Lumpur');
 
 
 //For framework use. Must be defined. Use full absolute paths and end them with '/'      eg. /var/www/project/
-$config['SITE_PATH'] = 'D:/wamp/www/terryx/';
-$config['BASE_PATH'] = 'D:/wamp/www/terryx/dooframework/';
+$config['SITE_PATH'] = 'D:/wamp/www/terryxlife/';
+$config['BASE_PATH'] = 'D:/wamp/www/terryxlife/dooframework/';
 
 //$config['SUBFOLDER'] = '/terryx/';
 

@@ -48,11 +48,13 @@
       jAlert(json.message, 'Invalid Login');
       $('#progress').hide();
 
-    } else if(json.is_logged_in === true) {
+    } if(json.is_logged_in === true) {
       window.location = json.role;
     }
 
-    else{ alert('Connection error. Please refresh the page.')}
+    else{ jAlert('Connection error. Please refresh the page.');
+    		$('#progress').hide();
+    		 }
   }
   $(function(){
     getNavDock();
