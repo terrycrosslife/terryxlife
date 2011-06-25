@@ -140,19 +140,18 @@
     return true;
   }
 
-  function ajaxValidationCallback(json, httpMessage, status){
+  function ajaxValidationCallback(status, form, json){
+   
     $('#progress').hide();
-    if (status === 201) {
-      jAlert("User created successfully", 'Success');
 
-    }
-    else if(status === 200){
-      var msg = jAlert("User is updated", 'Update Success');
+    if(status === true){
+      jAlert(json[0],json[1]);
+
     }else {
       $(form)[0].reset();
       jAlert('System database error. Please try again later', 'Error');
-
     }
+
      refreshUserList();
   }
   function getErrorStatus(){

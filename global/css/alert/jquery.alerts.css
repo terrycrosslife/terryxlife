@@ -4,7 +4,7 @@
 	min-width: 300px; /* Dialog will be no smaller than this */
 	max-width: 600px; /* Dialog will wrap after this width */
 	background: #FFF;
-	border: 10px solid #000;
+	border: 8px solid #000;
 	color: #000;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;

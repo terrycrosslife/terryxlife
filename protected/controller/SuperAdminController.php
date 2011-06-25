@@ -67,8 +67,9 @@ class SuperAdminController extends DooController {
         Doo::loadModel('Users');
         $u = new Users($user);
         $u->update();
+        $this->toJSON(array('User is updated', 'Update Success'), true);
         return 200;
-//        $this->toJSON('ok', true);
+
       }
     }
 

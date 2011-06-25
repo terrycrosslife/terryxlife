@@ -1,5 +1,29 @@
 // jQuery Alert Dialogs Plugin
+//
 // Version 1.1
+//
+// Cory S.N. LaViska
+// A Beautiful Site (http://abeautifulsite.net/)
+// 14 May 2009
+//
+// Visit http://abeautifulsite.net/notebook/87 for more information
+//
+// Usage:
+//		jAlert( message, [title, callback] )
+//		jConfirm( message, [title, callback] )
+//		jPrompt( message, [value, title, callback] )
+//
+// History:
+//
+//		1.00 - Released (29 December 2008)
+//
+//		1.01 - Fixed bug where unbinding would destroy all resize events
+//
+// License:
+//
+// This plugin is dual-licensed under the GNU General Public License and the MIT License and
+// is copyright 2008 A Beautiful Site, LLC.
+//
 (function($) {
 
 	$.alerts = {
@@ -165,7 +189,7 @@
 		},
 
 		_reposition: function() {
-			var top = (($(window).height() / 3) - ($("#popup_container").outerHeight() / 2)) + $.alerts.verticalOffset;
+			var top = (($(window).height() / 2) - ($("#popup_container").outerHeight() / 2)) + $.alerts.verticalOffset;
 			var left = (($(window).width() / 2) - ($("#popup_container").outerWidth() / 2)) + $.alerts.horizontalOffset;
 			if( top < 0 ) top = 0;
 			if( left < 0 ) left = 0;

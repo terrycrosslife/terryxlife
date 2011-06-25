@@ -6,7 +6,6 @@
 <div id="container">
   <div id="content">
     <div id="progress"></div>
-    <div id="hook_error"></div>
     <form id="login-form" class="green-form" action="login">
       <fieldset>
         <h1>X Login</h1>
@@ -42,21 +41,18 @@
   }
 
   function ajaxCallback(status, form, json){
-    $('#hook-error').html('');
-
-    if(json && json.is_logged_in === false){
-      jAlert(json.message, 'Invalid Login');
       $('#progress').hide();
 
-    } if(json.is_logged_in === true) {
+    if(status === true && json.is_logged_in === true) {
       window.location = json.role;
     }
 
     else{ jAlert('Connection error. Please refresh the page.');
-    		$('#progress').hide();
-    		 }
+      $('#progress').hide();
+    }
   }
   $(function(){
+    setLoader();
     getNavDock();
     jQuery("#login-form").validationEngine({
       ajaxFormValidation: true,

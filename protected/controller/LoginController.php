@@ -7,12 +7,10 @@ class LoginController extends DooController {
 
             $username = trim(htmlentities($_POST['username']));
             $password = trim(htmlentities($_POST['password']));
-            $data = array('is_logged_in' => false, 'message' => 'Combination of username or password is incorrect.');
 
             if (empty($username) || empty($password)) {
 
-                $this->toJSON($data, true);
-                exit;
+                return 400;
             }
 
             Doo::loadModel('Users');
@@ -35,8 +33,9 @@ class LoginController extends DooController {
                 $data = array('is_logged_in' => true, 'role'=>$rs->type);
                 $this->toJSON($data, true);
             } else {
-                $this->toJSON($data, true);
-              
+               $this->toJSON("Invalid combination of username and password", true);
+               return 400;
+
             }
         }
 

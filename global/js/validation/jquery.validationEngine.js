@@ -328,61 +328,59 @@
                 error: function(data, transport) {
                     methods._ajaxError(data, transport);
                 },
-                success: function(json, textStatus, codeStatus) {
-                   var ajaxMsg = textStatus;
-                   var ajaxCode = codeStatus.status;
-//                    if (json !== true) {
-//
-//                        // getting to this case doesn't necessary means that the form is invalid
-//                        // the server may return green or closing prompt actions
-//                        // this flag helps figuring it out
-//                        var errorInForm=false;
-//                        for (var i = 0; i < json.length; i++) {
-//                            var value = json[i];
-//
-//                            var errorFieldId = value[0];
-//                            var errorField = $($("#" + errorFieldId)[0]);
-//
-//                            // make sure we found the element
-//                            if (errorField.length == 1) {
-//
-//                                // promptText or selector
-//                                var msg = value[2];
-//
-//								// if the field is valid
-//                                if (value[1] == true) {
-//
-//                                    if (msg == ""  || !msg){
-//                                        // if for some reason, status==true and error="", just close the prompt
-//                                        methods._closePrompt(errorField);
-//                                    } else {
-//                                        // the field is valid, but we are displaying a green prompt
-//                                        if (options.allrules[msg]) {
-//                                            var txt = options.allrules[msg].alertTextOk;
-//                                            if (txt)
-//                                                msg = txt;
-//                                        }
-//                                        methods._showPrompt(errorField, msg, "pass", false, options, true);
-//                                    }
-//
-//                                } else {
-//                                    // the field is invalid, show the red error prompt
-//                                    errorInForm|=true;
-//                                    if (options.allrules[msg]) {
-//                                        var txt = options.allrules[msg].alertText;
-//                                        if (txt)
-//                                            msg = txt;
-//                                    }
-//                                    methods._showPrompt(errorField, msg, "", false, options, true);
-//                                }
-//                            }
-//                        }
-//                        options.onAjaxFormComplete(!errorInForm, form, json, options, statusCode);
-//                    } else {
-//
-//                      options.onAjaxFormComplete(true, form, "", options,  statusCode);
-//                    }
-  return options.onAjaxFormComplete(json, ajaxMsg, ajaxCode);
+                success: function(json) {
+
+                    if (json !== true) {
+
+                        // getting to this case doesn't necessary means that the form is invalid
+                        // the server may return green or closing prompt actions
+                        // this flag helps figuring it out
+                        var errorInForm=false;
+                        for (var i = 0; i < json.length; i++) {
+                            var value = json[i];
+
+                            var errorFieldId = value[0];
+                            var errorField = $($("#" + errorFieldId)[0]);
+
+                            // make sure we found the element
+                            if (errorField.length == 1) {
+
+                                // promptText or selector
+                                var msg = value[2];
+
+								// if the field is valid
+                                if (value[1] == true) {
+
+                                    if (msg == ""  || !msg){
+                                        // if for some reason, status==true and error="", just close the prompt
+                                        methods._closePrompt(errorField);
+                                    } else {
+                                        // the field is valid, but we are displaying a green prompt
+                                        if (options.allrules[msg]) {
+                                            var txt = options.allrules[msg].alertTextOk;
+                                            if (txt)
+                                                msg = txt;
+                                        }
+                                        methods._showPrompt(errorField, msg, "pass", false, options, true);
+                                    }
+
+                                } else {
+                                    // the field is invalid, show the red error prompt
+                                    errorInForm|=true;
+                                    if (options.allrules[msg]) {
+                                        var txt = options.allrules[msg].alertText;
+                                        if (txt)
+                                            msg = txt;
+                                    }
+                                    methods._showPrompt(errorField, msg, "", false, options, true);
+                                }
+                            }
+                        }
+                        options.onAjaxFormComplete(!errorInForm, form, json, options);
+                    } else {
+
+                      options.onAjaxFormComplete(true, form, "", options);
+                    }
                 }
             });
 
@@ -889,12 +887,13 @@
          * @param {Object} transport
          */
         _ajaxError: function(data, transport) {
+          console.log(data);
             if(data.status == 0 && transport == null){
                   alert("The page is not served from a server! ajax call failed");
             }
             else if(typeof console != "undefined")
-                console.log("Ajax error: " + data.status + " " + transport);
-                getErrorStatus();
+//                console.log("Ajax error: " + data.status + " " + transport);
+                ajaxCallbackError(data.responseText);
 
         },
         /**
@@ -1237,3 +1236,7 @@
         }
     };
 })(jQuery);
+function ajaxCallbackError(msg){
+ jAlert(eval(msg) , 'Oops..Something has go wrong');
+ $('#progress').hide();
+}
