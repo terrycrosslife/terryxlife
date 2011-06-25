@@ -141,7 +141,7 @@
   }
 
   function ajaxValidationCallback(status, form, json){
-   
+
     $('#progress').hide();
 
     if(status === true){
@@ -151,7 +151,7 @@
       $(form)[0].reset();
       jAlert('System database error. Please try again later', 'Error');
     }
-
+    
      refreshUserList();
   }
   function getErrorStatus(){

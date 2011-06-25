@@ -173,6 +173,7 @@ terryxlife.com;
 EMAILBODY;
 
         $mail->send();
+        $this->toJSON(array('User is created successfully', 'Create success'), true);
         return 201;
       }
     }
