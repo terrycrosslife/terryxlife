@@ -2,17 +2,30 @@
 
 class SuperAdminController extends DooController {
 
-  public function beforeRun() {
+  public function beforeRun($resource, $action) {
     session_start();
 
-    if (isset($_SESSION['user'])) {
-      if ($_SESSION['user']['role'] !== 'super_admin') {
-        $this->renderc('http://terryxlife.com/');
-      }
-    } else {
+//    if (isset($_SESSION['user'])) {
+//      if ($_SESSION['user']['role'] !== 'super_admin') {
+//        $this->renderc('http://terryxlife.com/');
+//      }
+//    } else {
+//
+//      return Doo::conf()->APP_URL;
+//    }
 
-      return Doo::conf()->APP_URL;
-    }
+   $role = (isset($_SESSION['user']['role'])) ? $_SESSION['user']['role'] : 'visitor';
+
+  if($role != 'visitor'){
+			if($_SESSION['user']['status'] != 'active'){
+              $role = 'inactive';
+            }
+		}
+
+    if($rs = $this->acl()->process($role, $resource, $action )){
+			//echo $role .' is not allowed for '. $resource . ' '. $action;
+			return $rs;
+		}
   }
 
   public function index() {

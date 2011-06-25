@@ -133,7 +133,10 @@ img{
   margin-top:2px;
   padding:0;
   height: 300px;
-  overflow:auto;
+  overflow:hidden;
+}
+#search_result ul:hover {
+  overflow: auto;
 }
 #search_result li {
   margin:0;

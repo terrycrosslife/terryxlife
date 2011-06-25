@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
  * Common configuration that can be used throughout the application
  * Please refer to DooConfig class in the API doc for a complete list of configurations
  * Access via Singleton, eg. Doo::conf()->BASE_PATH;
@@ -62,14 +62,14 @@ $config['ERROR_404_ROUTE'] = '/error';
  *                       array('192.168.1.23', '11211', true, 80)
  *                     );
  */
- 
+
 /**
  * Defines modules that are allowed to be accessed from an auto route URI.
  * Example, we have a module in SITE_PATH/PROTECTED_FOLDER/module/example
  * It can be accessed via http://localhost/example/controller/method/parameters
- * 
+ *
  * $config['MODULES'] = array('example');
- * 
+ *
  */
 
 /**
@@ -82,19 +82,19 @@ $config['ERROR_404_ROUTE'] = '/error';
  *     .....
  * } ?>
  *
- * You would need to enable autoload to use Namespace classes in index.php 
+ * You would need to enable autoload to use Namespace classes in index.php
  * spl_autoload_register('Doo::autoload');
  *
  * $config['APP_NAMESPACE_ID'] = 'myapp';
  *
  */
- 
+
 /**
- * To enable autoloading, add directories which consist of the classes needed in your application. 
+ * To enable autoloading, add directories which consist of the classes needed in your application.
  *
  * $config['AUTOLOAD'] = array(
                             //internal directories, live in the app
-                            'class', 'model', 'module/example/controller', 
+                            'class', 'model', 'module/example/controller',
                             //external directories, live outside the app
                             '/var/php/library/classes'
                         );

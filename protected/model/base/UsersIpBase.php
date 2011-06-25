@@ -70,5 +70,4 @@ class UsersIpBase extends DooModel{
                 )
             );
     }
-
 }

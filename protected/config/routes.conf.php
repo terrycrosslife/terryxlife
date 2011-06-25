@@ -5,7 +5,7 @@ $route['*']['/home'] = array('HomeController', 'index');
 $route['*']['/login'] = array('HomeController', 'login');
 $route['*']['/contact'] = array('HomeController', 'contact');
 $route['*']['/about'] = array('HomeController', 'about');
-$route['*']['/error'] = array('ErrorController', 'index');
+
 $route['post']['/login'] = array('LoginController', 'login');
 $route['*']['/logout'] = array('LoginController', 'logout');
 $route['*']['/super_admin'] = array('SuperAdminController', 'index');
@@ -28,7 +28,9 @@ $route['get']['/super_admin/get_one_user/:id'] = array('SuperAdminController', '
 $route['*']['/validate/check_username'] = array('ValidateController', 'checkUsername');
 $route['*']['/validate/check_email'] = array('ValidateController', 'checkEmail');
 
-
+//Error page
+$route['*']['/error'] = array('ErrorController', 'index');
+$route['*']['/deny_access'] = array('ErrorController', 'banUser');
 
 
 //---------- Delete if not needed ------------

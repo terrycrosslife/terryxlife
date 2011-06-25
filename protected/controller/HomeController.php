@@ -7,7 +7,7 @@ class HomeController extends DooController {
   }
 
   private function check_role() {
-    if (isset($_SESSION['user'])) {
+    if (isset($_SESSION['user']) && $_SESSION['user']['status'] === 'active') {
       if ($_SESSION['user']['role'] === 'super_admin') {
        $data['dock'] = 'template/super-dock';
       }
