@@ -9,16 +9,16 @@ class HomeController extends DooController {
   private function check_role() {
     if (isset($_SESSION['user']) && $_SESSION['user']['status'] === 'active') {
       if ($_SESSION['user']['role'] === 'super_admin') {
-       $data['dock'] = 'template/super-dock';
+       $data['menu'] = 'template/super-menu';
       }
       if ($_SESSION['user']['role'] === 'admin'){
-        $data['dock'] = 'template/admin-dock';
+        $data['menu'] = 'template/admin-menu';
       }
       if($_SESSION['user']['role'] === 'normal'){
-        $data['dock'] = 'template/normal-dock';
+        $data['menu'] = 'template/normal-menu';
       }
     } else {
-       $data['dock'] = 'template/visitor-dock';
+       $data['menu'] = 'template/login-menu';
     }
 
     return $data;

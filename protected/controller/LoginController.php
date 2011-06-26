@@ -20,7 +20,7 @@ class LoginController extends DooController {
       $u->password = hash('sha256', $password);
 
       $rs = $this->db()->getOne($u, array('select' => 'id, username, type, status'));
-//      if ($rs && $rs->status == 'active') {
+      if ($rs && $rs->status == 'active') {
         session_start();
         $_SESSION['user'] = array(
             'id' => $rs->id,
@@ -32,15 +32,15 @@ class LoginController extends DooController {
 
         $data = array('is_logged_in' => true, 'role' => $rs->type);
         $this->toJSON($data, true);
-//      }
-//      elseif ($rs && $rs->status == 'inactive') {
-//        $this->toJSON("You are not allow to access. Please contact the administrator", true);
-//        return 400;
-//      }
-//      else {
-//        $this->toJSON("Invalid combination of username and password !", true);
-//        return 400;
-//      }
+      }
+      elseif ($rs && $rs->status == 'inactive') {
+        $this->toJSON("You are not allow to access. Please contact the administrator", true);
+        return 400;
+      }
+      else {
+        $this->toJSON("Invalid combination of username and password !", true);
+        return 400;
+      }
     }
   }
 

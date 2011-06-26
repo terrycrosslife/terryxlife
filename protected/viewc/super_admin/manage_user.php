@@ -1,12 +1,13 @@
 <?php $this->renderc('template/head-start'); ?>
 <link rel="stylesheet" href="global/css/green_form.css" type="text/css" media="screen" />
 <?php $this->renderc('template/head-end'); ?>
-<?php $this->renderc('template/super-dock'); ?>
+<?php $this->renderc('template/nav'); ?>
 <div id="container">
-  <div id="content">
+  <div id="main-content">
     <div id="progress"></div>
+    <?php $this->renderc('template/super-menu'); ?>
+    <div class="content">
     <form id="manage-user-form" class="green-form" action="super_admin/create_user">
-      <fieldset>
         <h1>User Management</h1>
         <input type="hidden" id="user_id" name="user_id" />
         <label for="user_type">User Type</label>
@@ -50,12 +51,14 @@
           <input type="button" value="Print" name="print" />
           <input type="button" value="Delete" />
         </div>
-      </fieldset>
+
     </form>
-				abc
+
   </div>
+
 </div>
-<div id="sidebar">
+
+<div id="side-content">
   <div class="content">
     <div id="searchbar">
       <form id="search_form">
@@ -151,7 +154,7 @@
       $(form)[0].reset();
       jAlert('System database error. Please try again later', 'Error');
     }
-    
+
      refreshUserList();
   }
   function getErrorStatus(){

@@ -1,4 +1,4 @@
 function setLoader(){
-  var body= $('body').height();
+  var body= $('html').height();
   $('#loader').height(body);
 }
