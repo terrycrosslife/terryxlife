@@ -21,11 +21,8 @@ class SuperAdminController extends DooController {
               $role = 'inactive';
             }
 		}
-
-    if($rs = $this->acl()->process($role, $resource, $action )){
-			//echo $role .' is not allowed for '. $resource . ' '. $action;
-			return $rs;
-		}
+     $rs = $this->acl()->process($role, $resource, $action);
+      return $rs;
   }
 
   public function index() {
@@ -33,8 +30,10 @@ class SuperAdminController extends DooController {
     Doo::loadModel('Tag');
     $t = new Tag();
 
-    $data = $t->find();
+    $data['tag'] = $t->find();
 
+    $data['menu'] = 'template/super_menu';
+ 
     $this->renderc('super_admin/index', $data);
   }
 

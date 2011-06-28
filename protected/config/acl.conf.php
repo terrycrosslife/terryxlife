@@ -1,6 +1,7 @@
 <?php
 
-$acl['super_admin']['allow'] = array('SuperAdminController'=> '*');
+$acl['super_admin']['allow'] = array('SuperAdminController' => '*',
+    'ArticleController' => '*');
 
-$acl['inactive']['failRoute'] = array('ErrorController'=>array('banUser'));
+$acl['inactive']['failRoute'] = array('ErrorController' => array('banUser'));
 ?>

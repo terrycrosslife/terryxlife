@@ -2,11 +2,10 @@
 <link rel="stylesheet" href="global/css/green_form.css" type="text/css" media="screen" />
 <?php $this->renderc('template/head-end'); ?>
 <?php $this->renderc('template/nav'); ?>
-
 <div id="container">
   <div id="main-content">
     <div id="progress"></div>
-<?php $this->renderc('template/super_menu'); ?>
+    <?php $this->renderc($data); ?>
     <div class="content">
       <form id="manage-user-form" class="green-form" action="super_admin/create_user">
         <h1>User Management</h1>
@@ -59,15 +58,13 @@
   </div>
 
   <div id="side-content">
-     <div id="search-container">
-        <form id="search-form">
-          <input type="text" id="search" name="search" placeholder="Search" onchange="searchUser();" />
-          <button type="submit" id="search-button" name="search-button"></button>
-        </form>
-       <div id="new" onclick="selectNew();">Add user</div>
-      </div>
     <div class="content">
+      <div id="searchbar">
+        <form id="search_form">
+          <input type="text" id="search" name="search" placeholder="Search" />
 
+        </form>
+      </div>
       <div id="search_result">
       </div>
     </div>
@@ -90,7 +87,8 @@
       $('#search_result').html('');
       $.get('super_admin/get_user_list', function(data){
         if(data){
-          var userlist = '<ul id="search_ul">';
+          var userlist  = '<div id="new" onclick="selectNew()">New</div>';
+          userlist += '<ul id="search_ul">';
 
           for(var i=0;i<data.length;i++){
             userlist += '<li id="'+ data[i].id+'">'+ data[i].username+'</li>';
@@ -184,10 +182,6 @@
         $(password_confirm_field).appendTo('.d-field:eq(1)');
       }
     }
-
-    function searchUser(){
-    $('#search_ul').html('');
-    }
   </script>
 </body>
-</html>
+</html>>

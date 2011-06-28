@@ -71,7 +71,7 @@ $config['ERROR_404_ROUTE'] = '/error';
  * $config['MODULES'] = array('example');
  *
  */
-
+$config['MODULES'] = array('CommonController');
 /**
  * Unique string ID of the application to be used with PHP 5.3 namespace and auto loading of namespaced classes
  * If you wish to use namespace with the framework, your classes must have a namespace starting with this ID.
@@ -105,3 +105,4 @@ $config['ERROR_404_ROUTE'] = '/error';
  * Use lower case for you own settings for future Compability with DooPHP
  */
 //$config['pagesize'] = 10;
+$config['AUTOLOAD'] = array('/CommonController');

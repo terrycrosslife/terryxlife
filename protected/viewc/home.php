@@ -5,9 +5,10 @@
 <?php $this->renderc('template/nav'); ?>
 
 <div id="container" class="clearall">
+
   <div id="main-content">
     <div id="progress"></div>
-    <?php $this->renderc($data['menu']); ?>
+  <?php $this->renderc($data); ?>
     <div class="content">
 				Welcome to my website
     </div>

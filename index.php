@@ -10,7 +10,7 @@ include $config['BASE_PATH'].'Doo.php';
 include $config['BASE_PATH'].'app/DooConfig.php';
 
 # Uncomment for auto loading the framework classes.
-//spl_autoload_register('Doo::autoload');
+spl_autoload_register('Doo::autoload');
 
 Doo::conf()->set($config);
 
@@ -24,7 +24,7 @@ Doo::acl()->defaultFailedRoute = '/terryxlife/deny_access';
 //Doo::db()->setMap($dbmap);
 Doo::db()->setDb($dbconfig, $config['APP_MODE']);
 //Doo::db()->sql_tracking = true;	#for debugging/profiling purpose
-
+Doo::loadController('CommonController');
 Doo::app()->route = $route;
 
 # Uncomment for DB profiling

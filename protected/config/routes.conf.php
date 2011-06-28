@@ -2,6 +2,7 @@
 
 $route['*']['/'] = array('HomeController', 'index');
 $route['*']['/home'] = array('HomeController', 'index');
+$route['*']['/article'] = array('HomeController', 'article');
 $route['*']['/login'] = array('HomeController', 'login');
 $route['*']['/contact'] = array('HomeController', 'contact');
 $route['*']['/about'] = array('HomeController', 'about');
@@ -13,6 +14,7 @@ $route['*']['/finance'] = array('FinanceController', 'index');
 
 
 //Article
+$route['*']['/manage_article'] = array('ArticleController', 'manageArticlePage');
 $route['post']['/article/create_article'] = array('ArticleController', 'createArticle');
 
 

@@ -8,9 +8,10 @@
 
 
   <div id="container">
+    <?php $this->renderc($data['menu']); ?>
     <div id="main-content">
       <div id="progress"></div>
-      <?php $this->renderc('template/super-menu'); ?>
+
       <div class="content">
       <div class="blog_box">
         <h2>First Blog post</h2>
@@ -23,7 +24,7 @@
         <label for="tag">Tag</label>
         <select name="tag">
           <option value="">Please select a tag</option>
-          <?php foreach ($data as $tag): ?>
+          <?php foreach ($data['tag'] as $tag): ?>
             <option value="<?php echo $tag->tag_id; ?>"> <?php echo $tag->name; ?> </option>
           <?php endforeach; ?>
         </select></br></br>

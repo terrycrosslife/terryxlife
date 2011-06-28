@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
-  background:#FFF;
+  background: #FFF;
 }
 h1, h2, h3, h4, h5, h6 {
   padding: 0 5px;
@@ -21,26 +21,18 @@ a:active  {color:yellow;}
 img{
   border: none;
 }
-
 #header{
-  margin:10px auto;
+  margin:5px auto;
   width:1020px;
-
 }
-
-/*#header{
-  content:".";
-  margin-top:100px;
-  visibility: hidden;
-}*/
 #logo{
 
   height: 100px;
 
 }
 #container{
-    margin:0 auto;
-     padding:0;
+  margin:0 auto;
+  padding:0;
   width: 1020px;
   line-height: 18px;
 
@@ -53,7 +45,7 @@ img{
 
 }
 #main-content .content {
-  margin-top: 10px;
+  margin-top: 5px;
   padding:10px;
   background-color: #f3f3f3;
   border:1px solid #999999;
@@ -66,7 +58,7 @@ img{
 }
 
 #side-content .content {
-  margin-top: 10px;
+  margin-top: 5px;
   padding:10px;
   min-height: 300px;
   border:1px solid #999999;
@@ -105,30 +97,46 @@ border-radius: 8px;
   position: absolute;
   top:42%;
   left:37%;
-  z-index: 1200;
+  z-index: 1500;
   width:32px;
-  min-height:32px;
+  height:32px;
   display:none;
   background: url(../img/ajax-loader.gif) no-repeat center center;
 }
+#search-container {
+  margin: 5px 0 6px;
 
-#searchbar {
-  margin:10px 5px;
-  background: url(../img/search.png) no-repeat center center;
-  width:195px;
-  height: 32px;
+
+}
+#search-form {
+  width:220px;
+  border:1px solid #ccc;
+  display: inline-block
+}
+#search-container #new{
+  background-color: #336699;
+  border: 1px solid #003366;
+  color: #FFFFFF;
+  display: inline-block;
+  padding: 2px 7px 3px;
+  vertical-align: top;
   cursor: pointer;
 }
-#searchbar input {
-  width:155px;
-  margin:7px 10px 0;
-  border:none;
+#search-container input[type=text] {
+  width:200px;
+  border: none;
+  height:22px;
 }
-#searchbar input {
-  outline:none;
+#search-container button {
+  background: url(../img/search.png) 0 0 no-repeat;
+  width:16px;
+  height:22px;
+  vertical-align: bottom;
+  border:none;
+  cursor:pointer;
+
 }
 #search_result {
-  padding:5px;
   border-radius:5px;
   -webkit-border-radius:5px;
   -moz-border-radius: 5px;
@@ -156,57 +164,44 @@ border-radius: 8px;
   background-color: #55ea55;
   font-weight: bold;
 }
-#new {
-  background: url(../img/add.png) no-repeat;
-  text-indent: 30px;
-  font-weight: bold;
-  font-size: 14px;
-  padding:6px 10px 10px;
-  cursor:pointer;
-  border-radius:5px;
-  -webkit-border-radius:5px;
-  -moz-border-radius: 5px;
-  -khtml-border-radius: 5px;
-}
-#new:hover {
-  color:#FFF;
-  background-color: #55ea55;
-}
 #nav {
-  margin: 0 auto;
   height: 60px;
-  width: 1024px;
   background: url(../img/nav-bg.png) repeat-x;
   display:block;
+  min-width: 1180px;
+}
+#nav-content {
+  margin:0 auto;
+  width: 1020px;
+
 }
 #nav a  {
-    float: left;
-    font-size: 16px;
-    width: 88px;
-    padding: 20px;
-    text-align: center;
-    color: #FFF;
+  float: left;
+  font-size: 16px;
+  width: 88px;
+  padding: 20px;
+  text-align: center;
+  color: #FFF;
 }
 #nav a:hover {
   color: #FFF;
   font-weight: bold;
 }
 #menu {
-  width:1020px;
-  margin:10px auto 0;
+  margin-top:5px;
+  padding: 5px;
+  background: url(../img/menu-bg.png) repeat-x;
+  text-align: center;
 }
 #menu a {
-  margin-right:10px;
-  padding: 5px 10px 5px 0;
-  float:left;
+  margin:auto;
+  padding: 0 10px;
+
   text-indent: 8px;
   color:#fff;
- border:1px solid #336633;
-  border-radius: 5px;
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
-background: url(../img/menu-bg.png) repeat-x;
+
+
 }
 #menu a:hover {
-color:#ffff33;
+  color:#ffff33;
 }
