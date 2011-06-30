@@ -103,67 +103,6 @@ border-radius: 8px;
   display:none;
   background: url(../img/ajax-loader.gif) no-repeat center center;
 }
-#search-container {
-  margin: 5px 0 6px;
-
-
-}
-#search-form {
-  width:220px;
-  border:1px solid #ccc;
-  display: inline-block
-}
-#search-container #new{
-  background-color: #336699;
-  border: 1px solid #003366;
-  color: #FFFFFF;
-  display: inline-block;
-  padding: 2px 7px 3px;
-  vertical-align: top;
-  cursor: pointer;
-}
-#search-container input[type=text] {
-  width:200px;
-  border: none;
-  height:22px;
-}
-#search-container button {
-  background: url(../img/search.png) 0 0 no-repeat;
-  width:16px;
-  height:22px;
-  vertical-align: bottom;
-  border:none;
-  cursor:pointer;
-
-}
-#search_result {
-  border-radius:5px;
-  -webkit-border-radius:5px;
-  -moz-border-radius: 5px;
-  -khtml-border-radius: 5px;
-}
-#search_result ul {
-  margin-top:2px;
-  padding:0;
-  height: 300px;
-  overflow:hidden;
-}
-#search_result ul:hover {
-  overflow: auto;
-}
-#search_result li {
-  margin:0;
-  padding:5px 2px;
-  list-style: none;
-  border-bottom: 1px dotted;
-  cursor: pointer;
-  font-size:14px;
-}
-#search_result li:hover {
-  color: #FFF;
-  background-color: #55ea55;
-  font-weight: bold;
-}
 #nav {
   height: 60px;
   background: url(../img/nav-bg.png) repeat-x;
@@ -196,11 +135,8 @@ border-radius: 8px;
 #menu a {
   margin:auto;
   padding: 0 10px;
-
   text-indent: 8px;
   color:#fff;
-
-
 }
 #menu a:hover {
   color:#ffff33;
