@@ -61,7 +61,7 @@
   <div id="side-content">
      <div id="search-container">
         <form id="search-form">
-          <input type="text" id="search" name="search" placeholder="Search" onchange="searchUser();" />
+          <input type="text" id="search" name="search" placeholder="Search" onkeyup="searchUser();" />
           <button type="submit" id="search-button" name="search-button"></button>
         </form>
        <div id="new" onclick="selectNew();">Add user</div>
@@ -186,7 +186,20 @@
     }
 
     function searchUser(){
-    $('#search_ul').html('');
+	var keyword = $('#search').val();
+	var list = $('ul#search_ul > li');
+   for(var count = 0; count < list.length; count++){
+//	   console.log(list[count].textContent.length);
+	if(list[count].textContent.length < keyword.length){
+		$(list[count]).hide();
+	} else {
+		if(list[count].textContent.substr(0, keyword.length).toLowerCase() === keyword.toLowerCase()){
+			$(list[count]).show();
+		} else {
+			$(list[count]).hide();
+		}
+	}
+   }
     }
   </script>
 </body>
