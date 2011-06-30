@@ -39,7 +39,6 @@
 #search_result ul {
   margin-top:2px;
   padding:0;
-  height: 300px;
   overflow:hidden;
 }
 #search_result ul:hover {
