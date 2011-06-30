@@ -1,1 +1,2 @@
-/.settings/
+/.settings
+/protected/config/common.conf.php
