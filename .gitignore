@@ -1,4 +1,5 @@
 /.settings
-/protected/config/common.conf.php
 /protected/config/
 !/protected/config/routes.conf.php
+!/protected/config/acl.conf.php
+!/protected/config/db.conf.php
