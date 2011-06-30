@@ -10,11 +10,12 @@
 		<?php $this->renderc('template/super_menu'); ?>
 		<div class="content">
 			<form id="manage-user-form" class="green-form" action="super_admin/create_user">
-				<h1>User Management</h1>
+				<h1>User Management Form</h1>
 				<input type="hidden" id="user_id" name="user_id" />
 				<label for="user_type">User Type</label>
 				<select id="user_type" name="user_type" class="validate[required]">
 					<option value="">Please select</option>
+					<option value="super_admin">Master</option>
 					<option value="admin">Administrator</option>
 					<option value="normal">Member</option>
 				</select>

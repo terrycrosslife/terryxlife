@@ -3,7 +3,7 @@
   margin: 5px 0 6px;
 }
 #search-form {
-  width:220px;
+  width:222px;
   border:1px solid #ccc;
   display: inline-block
 }
@@ -20,7 +20,7 @@
   width:197px;
   border: none;
   height:22px;
-  margin-left: 3px;
+  padding-left: 3px;
 }
 #search-container button {
   background: url(../img/search.png) 0 0 no-repeat;
@@ -29,7 +29,6 @@
   vertical-align: bottom;
   border:none;
   cursor:pointer;
-
 }
 #search_result {
   margin-top: 5px;
@@ -51,9 +50,11 @@
   padding:3px;
   list-style: none;
   cursor: pointer;
+  color: #000099;
+  text-align: center;
 }
 #search_result li:nth-child(even) {
-	background: #ccc;
+	background: #f2f2f2;
 }
 #search_result li:hover {
   color: #FFF;
