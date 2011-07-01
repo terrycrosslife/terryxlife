@@ -31,7 +31,11 @@ class HomeController extends CommonController {
     $data = self::assignMenu();
     $this->renderc('about', $data);
   }
-
+  
+  public function testck(){
+	  Doo::loadPlugin('CKEditor');
+	
+  }
 }
 
 ?>

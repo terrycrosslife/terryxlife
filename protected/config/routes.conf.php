@@ -34,6 +34,8 @@ $route['*']['/validate/check_email'] = array('ValidateController', 'checkEmail')
 $route['*']['/error'] = array('ErrorController', 'index');
 $route['*']['/deny_access'] = array('ErrorController', 'banUser');
 
+//test
+$route['*']['/text_ck'] = array('HomeController', 'testck');
 
 //---------- Delete if not needed ------------
 $admin = array('admin'=>'1234');
