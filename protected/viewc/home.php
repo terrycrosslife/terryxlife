@@ -44,7 +44,6 @@
   }
   $(function(){
     setLoader();
-    getNavDock();
     jQuery("#login-form").validationEngine({
       ajaxFormValidation: true,
       onBeforeAjaxFormValidation: beforeCall,

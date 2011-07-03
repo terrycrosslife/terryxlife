@@ -1,6 +1,5 @@
 <?php $this->renderc('template/head-start'); ?>
 <link rel="stylesheet" href="global/css/green_form.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="global/css/manage_layout.css" type="text/css" media="screen" />
 <?php $this->renderc('template/head-end'); ?>
 <?php $this->renderc('template/nav'); ?>
 
@@ -187,7 +186,7 @@
 			var keyword = $('#search').val();
 			var list = $('ul#search_ul > li');
 			for(var count = 0; count < list.length; count++){
-				
+
 				if(list[count].textContent.length < keyword.length){
 					$(list[count]).hide();
 				} else {
