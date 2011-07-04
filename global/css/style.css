@@ -141,6 +141,10 @@ border-radius: 8px;
 #menu a:hover {
   color:#ffff33;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> add jquery ui
 /*Search*/
 #search-container {
   margin: 5px 0 6px;
@@ -202,4 +206,8 @@ border-radius: 8px;
   color: #FFF;
   background-color: #55ea55;
   font-weight: bold;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> add jquery ui
