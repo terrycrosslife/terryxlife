@@ -54,14 +54,14 @@ $config['DEBUG_ENABLED'] = TRUE;
 $config['ERROR_404_ROUTE'] = '/error';
 
 
-/**
- * Settings for memcache server connections, you don't have to set if using localhost only.
- * host, port, persistent, weight
- * $config['MEMCACHE'] = array(
- *                       array('192.168.1.31', '11211', true, 40),
- *                       array('192.168.1.23', '11211', true, 80)
- *                     );
- */
+///**
+// * Settings for memcache server connections, you don't have to set if using localhost only.
+// * host, port, persistent, weight
+ $config['MEMCACHE'] = array(
+                      array('124.150.140.151', '11211', true, 40),
+                      array('124.150.140.151', '11211', true, 80)
+                    );
+
 
 /**
  * Defines modules that are allowed to be accessed from an auto route URI.
