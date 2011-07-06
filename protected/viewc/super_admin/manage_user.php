@@ -8,6 +8,7 @@
 		<div id="progress"></div>
 		<?php $this->renderc('template/super_menu'); ?>
 		<div class="content">
+			<?php echo $_SERVER['HTTP_HOST']; ?>
 			<form id="manage-user-form" class="green-form" action="super_admin/create_user">
 				<h1>User Management Form</h1>
 				<input type="hidden" id="user_id" name="user_id" />
@@ -142,14 +143,13 @@
 		}
 
 		function ajaxValidationCallback(status, form, json){
-
 			$('#progress').hide();
-
+			$(form)[0].reset();
+			
 			if(status === true){
 				jAlert(json[0],json[1]);
 
 			}else {
-				$(form)[0].reset();
 				jAlert('System database error. Please try again later', 'Error');
 			}
 
