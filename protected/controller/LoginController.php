@@ -39,10 +39,10 @@ class LoginController extends DooController {
 				$data = array('is_logged_in' => true, 'role' => $rs->type);
 
 				//if remember me is selected
-				if ($_POST['remember']) {
-
-					setRememberMe();
-				}
+//				if ($_POST['remember']) {
+//
+//					setRememberMe();
+//				}
 
 
 				$this->toJSON($data, true);

@@ -73,7 +73,6 @@
 	<?php $this->renderc('template/footer'); ?>
 	<script type="text/javascript">
 		$(function(){
-			getNavDock();
 			jQuery("#manage-user-form").validationEngine({
 				ajaxFormValidation: true,
 				onAjaxFormComplete: ajaxValidationCallback,
@@ -181,23 +180,11 @@
 				$(password_confirm_field).appendTo('.d-field:eq(1)');
 			}
 		}
-
+		
 		function searchUser(){
-			var keyword = $('#search').val();
-			var list = $('ul#search_ul > li');
-			for(var count = 0; count < list.length; count++){
-
-				if(list[count].textContent.length < keyword.length){
-					$(list[count]).hide();
-				} else {
-					if(list[count].textContent.substr(0, keyword.length).toLowerCase() === keyword.toLowerCase()){
-						$(list[count]).show();
-					} else {
-						$(list[count]).hide();
-					}
-				}
-			}
+			Search.filter($('#search').val(), $('ul#search_ul > li'));
 		}
+		
 	</script>
 </body>
 </html>
