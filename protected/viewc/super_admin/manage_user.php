@@ -1,5 +1,5 @@
 <?php $this->renderc('template/head-start'); ?>
-<link rel="stylesheet" href="global/css/green_form.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="global/css/blk-form.css" type="text/css" media="screen" />
 <?php $this->renderc('template/head-end'); ?>
 <?php $this->renderc('template/nav'); ?>
 
@@ -9,7 +9,7 @@
 		<?php $this->renderc('template/super_menu'); ?>
 		<div class="content">
 			<?php echo $_SERVER['HTTP_HOST']; ?>
-			<form id="manage-user-form" class="green-form" action="super_admin/create_user">
+			<form id="manage-user-form" class="blk-form" action="super_admin/create_user">
 				<h1>User Management Form</h1>
 				<input type="hidden" id="user_id" name="user_id" />
 				<label for="user_type">User Type</label>

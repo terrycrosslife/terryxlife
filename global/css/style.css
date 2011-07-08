@@ -5,8 +5,15 @@ body {
   background: #FFF;
 }
 h1, h2, h3, h4, h5, h6 {
-  padding: 0 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: -25px;
+  border:1px solid #000;
+  background-color: #000;
+  color:#fff;
+  width: 670px;
 }
+
 a{
   text-decoration: none;
 }
@@ -35,7 +42,6 @@ img{
   padding:0;
   width: 1020px;
   line-height: 18px;
-
 }
 #main-content {
   float:left;
@@ -49,6 +55,16 @@ img{
   padding:10px;
   background-color: #f3f3f3;
   border:1px solid #999999;
+}
+#main-content .left-box {
+	float:left;
+}
+
+#main-content .right-box {
+	float:right;
+}
+#main-content .center {
+	text-align: center;
 }
 #side-content{
   margin-left:20px;
@@ -141,10 +157,6 @@ border-radius: 8px;
 #menu a:hover {
   color:#ffff33;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> add jquery ui
 /*Search*/
 #search-container {
   margin: 5px 0 6px;
@@ -206,8 +218,4 @@ border-radius: 8px;
   color: #FFF;
   background-color: #55ea55;
   font-weight: bold;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> add jquery ui
