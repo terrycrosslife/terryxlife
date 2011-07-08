@@ -29,8 +29,4 @@ FileETag MTime Size
        ExpiresActive on
        ExpiresDefault "access plus 1 month"
    </filesmatch>
-<<<<<<< HEAD
 </ifmodule>
-=======
-</ifmodule>
->>>>>>> Added favicon and etag for htaccess
